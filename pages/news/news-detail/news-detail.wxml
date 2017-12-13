@@ -1,0 +1,19 @@
+<view class="news-detail-container">
+  <image class="head-img" src="{{authorImg}}"></image>
+  <view class="author-time">
+    <image class="author-avatar" src="{{authorIcon}}"></image>
+    <text class="author-name">{{authorName}}</text>
+    <text class="const-text">发表于</text>
+    <text class="time">{{authorData}}</text>
+  </view>
+  <text class="title">{{title}}</text>
+  <view class="tool">
+    <view class="circle-img">
+      <image catchtap="collectTap" wx:if="{{collected}}" src="http://data.allenamy.com/lmpimg/sch.png"></image>
+      <image catchtap="collectTap" wx:else src="http://data.allenamy.com/lmpimg/sc.png"></image>
+      <image catchtap="onShowTap" class="share-img" src="http://data.allenamy.com/lmpimg/fx.png"></image>
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="detail">{{articleText}}</text>
+</view>

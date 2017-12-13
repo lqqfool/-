@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class='index'>
+  <image class='logo' src='http://data.allenamy.com/lmpimg/logo.png'></image>
+    <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">Hello,{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+  <view class='index-btn' bindtap="goNewsTap">
+    <text>和音乐一起分享时光</text>
+  </view>
+</view>
